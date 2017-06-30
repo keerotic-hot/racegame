@@ -2,10 +2,12 @@ var db = firebase.database();
 
 var STATE = {
 	MAINMENU:'MAINMENU',
+	GAMESTAGE:'GAMESTAGE',
 }
 
 var renderer;
 var mainmenu;
+var gamestage;
 
 var state = STATE.MAINMENU;
 
@@ -21,6 +23,7 @@ function init(){
 	container.appendChild(renderer.domElement);
 
 	mainmenu = new MainMenu(renderer);
+	gamestage = new GameStage(renderer);
 
 	window.addEventListener('resize',onWindowResize);
 	onWindowResize();
@@ -31,12 +34,16 @@ function init(){
 function onWindowResize(){
 	renderer.setSize(window.innerWidth,window.innerHeight);
 	mainmenu.onWindowResize();
+	gamestage.onWindowResize();
 }
 
 function render(){
 	switch(state){
 		case STATE.MAINMENU:
 			mainmenu.render();
+		break;
+		case STATE.GAMESTAGE:
+			gamestage.render();
 		break;
 	}
 }

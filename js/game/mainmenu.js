@@ -54,12 +54,14 @@ function MainMenu(renderer){
 
 		object.mixer = new THREE.AnimationMixer( object );
 		mixers.push( object.mixer );
-		window.fbx = object;
 
 		var action = object.mixer.clipAction( object.animations[ 0 ] );
 		action.play();
 		_scene.add( object );
 
+		
+		window.fbx = object;
+		window.scene = _scene;
 
 	}, onProgress, onError );	
 
