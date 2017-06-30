@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Project - Race Game</title>
+	<meta name="viewport" content="width=640,user-scalable=no"/>
+	<link rel="manifest" href="manifest.json"/>
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="#333"/>
+	<meta name="apple-mobile-web-app-title" content="PWA Game"/>
+	<link rel="apple-touch-icon" href="img/icons/152.png"/>
+	<meta name="msapplication-TileImage" content="img/icons/144.png"/>
+	<meta name="msapplication-TileColor" content="#333"/>
+	<meta name="theme-color" content="#333">
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body onload="init();">
+	<div>Hello</div>
+	<script>
+		function init(){
+			
+		}
+
+		if('serviceWorker' in navigator) {
+		  navigator.serviceWorker
+	           .register('sw.js')
+	           .then(function() { 
+	           		console.log("Service Worker Registered"); 
+	           	});
+		}
+	</script>
+</body>
+</html>
