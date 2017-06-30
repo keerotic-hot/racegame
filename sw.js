@@ -6,6 +6,7 @@ var filesToCache = [
   base+'/index.html',
   base+'/css/style.css',
   base+'/js/firebase-init.js',
+  base+'/js/three.min.js',
   base+'/js/game.js',
 ];
 
