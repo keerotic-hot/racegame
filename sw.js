@@ -7,8 +7,11 @@ var filesToCache = [
   base+'/css/style.css',
   base+'/js/firebase-init.js',
   base+'/js/three.min.js',
+  base+'/js/FBXLoader.js',
+  base+'/js/zlib/inflate.min.js',
   base+'/js/game.js',
   base+'/js/game/mainmenu.js',
+  base+'/assets/running2.fbx',
 ];
 
 self.addEventListener('install', e => {
