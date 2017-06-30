@@ -11,10 +11,14 @@ function MainMenu(renderer){
 	_camera.lookAt(new THREE.Vector3(0,0,0));
 	//controls = new THREE.DeviceOrientationControls(_camera);
 
-	var geo = new THREE.BoxGeometry(10,10,10,1,1,1);
-	var mat = new THREE.MeshBasicMaterial({color:0xffff00,wireframe: true });
+	var geo = new THREE.BoxBufferGeometry(10,10,10,1,1,1);
+	var mat = new THREE.MeshPhongMaterial({color:0xffff00,wireframe: false });
 	var mesh = new THREE.Mesh(geo,mat);
 	_scene.add(mesh);
+
+	var light = new THREE.PointLight();
+	light.position.set(100,100,50);
+	_scene.add(light);
 
 
 	_this.onWindowResize = function(){
@@ -23,8 +27,9 @@ function MainMenu(renderer){
 	}
 
 	_this.render = function(){
-		mesh.rotateX(Math.PI/180);
-		mesh.rotateY(2*Math.PI/180);
+		console.log(Time.deltaTime);
+		mesh.rotateX(100*Math.PI/180*Time.deltaTime);
+		mesh.rotateY(200*Math.PI/180*Time.deltaTime);
 		_renderer.render(_scene,_camera);
 	}
 }

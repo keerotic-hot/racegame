@@ -8,6 +8,7 @@ var filesToCache = [
   base+'/js/firebase-init.js',
   base+'/js/three.min.js',
   base+'/js/game.js',
+  base+'/js/game/mainmenu.js',
 ];
 
 self.addEventListener('install', e => {

@@ -43,6 +43,7 @@ function render(){
 
 function loop(){
 	requestAnimationFrame(loop);
+	Time.update();
 
 	render();
 }
