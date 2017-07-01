@@ -10,7 +10,9 @@ var filesToCache = [
   base+'/js/FBXLoader.js',
   base+'/js/zlib/inflate.min.js',
   base+'/js/game.js',
+  base+'/js/game/skybox.js',
   base+'/js/game/mainmenu.js',
+  base+'/js/game/gamestage.js',
   base+'/assets/running2.fbx',
 ];
 
